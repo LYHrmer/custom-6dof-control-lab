@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "scope": "free-space numerical implementation validation only",
+  "passed": true,
+  "environment": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "mujoco": "3.12.0",
+    "pytest": "8.4.2",
+    "compliant-control-core": "0.5.1+7aec01379ff9"
+  },
+  "tests": {
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "upstream": {
+    "baseline_entries": 16458,
+    "after_entries": 16473,
+    "full_tree_unchanged": false,
+    "changed": [
+      ".pytest_cache/v/cache/lastfailed",
+      ".pytest_cache/v/cache/nodeids",
+      ".ruff_cache/0.16.5/4166688405332470438",
+      ".ruff_cache/0.16.5/5450709719391329081",
+      "results/.measured-budget-demo-9mor8kkr/demo/demo.mp4",
+      "results/.measured-budget-demo-9mor8kkr/demo/trace.npz",
+      "task_plan.md",
+      "tests/__pycache__/test_load_aware_compensation.cpython-310.pyc",
+      "tests/__pycache__/test_measured_budget_trial.cpython-310-pytest-6.2.5.pyc",
+      "tests/__pycache__/test_measured_budget_validation.cpython-310-pytest-8.4.2.pyc",
+      "tests/__pycache__/test_render_measured_budget_demo.cpython-310-pytest-8.4.2.pyc",
+      "tests/__pycache__/test_tangential_safety.cpython-310.pyc",
+      "tests/test_measured_budget_trial.py",
+      "tests/test_measured_budget_validation.py",
+      "tests/test_render_measured_budget_demo.py",
+      "tools/__pycache__/measured_budget_validation.cpython-310.pyc",
+      "tools/diagnostics/__pycache__/render_measured_budget_demo.cpython-310.pyc",
+      "tools/diagnostics/render_measured_budget_demo.py",
+      "tools/measured_budget_trial.py",
+      "tools/measured_budget_validation.py"
+    ],
+    "existing_runtime_assets_unchanged": true,
+    "runtime_changes": [],
+    "new_runtime_paths": [
+      "results/.measured-budget-demo-9mor8kkr/demo/trace.npz",
+      "results/.measured-budget-demo-9mor8kkr/demo/demo.mp4"
+    ],
+    "existing_test_tool_code_unchanged": true,
+    "existing_test_tool_changes": [],
+    "observation": "Concurrent workspace changes were observed. This project used a pinned wheel and did not run upstream tools/tests. Full-tree immutability is NOT claimed. Existing runtime assets means baseline src, environment, results, dist, build, cpp and cmake files; newly appearing outputs are listed separately. All differences are reported, not reverted.",
+    "before_manifest_sha256": "dcbb4e4eff284e9295118e3efbec8e254c253693832d0cbfc38d89212a466bb7",
+    "after_manifest_sha256": "5d035635274a93263ff86831d424da5e0997f8771677709baba7e90f37c4256f"
+  },
+  "runs": {
+    "gravity": {
+      "mode": "gravity",
+      "perturbation": false,
+      "duration_s": 1.9999999999998905,
+      "acceptance_complete": true,
+      "minimum_acceptance_duration_s": 2.0,
+      "perturbation_applied_steps": 0,
+      "steps": 2000,
+      "nq": 6,
+      "nv": 6,
+      "nu": 6,
+      "nsensor": 18,
+      "start_singularity": {
+        "characteristic_length_m": 0.3,
+        "scaled_singular_values": [
+          2.056176379800485,
+          1.7422795216841345,
+          0.7397808137093577,
+          0.4132852172803549,
+          0.3914715155831121,
+          0.19803231804490556
+        ],
+        "rank": 6,
+        "condition_number": 10.383034446600929
+      },
+      "final_position_error_m": 0.0,
+      "final_orientation_error_rad": 0.0,
+      "peak_position_error_m": 0.0,
+      "peak_joint_speed_rad_s": 0.0,
+      "final_joint_drift_rad": 0.0,
+      "saturated_steps": 0,
+      "max_abs_requested_torque_nm": [
+        0.0,
+        3.131980935917787,
+        0.08296421676951038,
+        0.00591680553424407,
+        0.17135011183649884,
+        2.754412496697167e-10
+      ],
+      "external_wrench_observation": null,
+      "estimated_external_wrench": null,
+      "normal_force_field": "0 compatibility placeholder unused by impedance, not a sensor",
+      "evaluation_truth": "eval_external_tau_* known injected joint torque; never passed to controller",
+      "scope": "ideal free-space simulation; not hardware validation or sensorless force estimation",
+      "config_sha256": "9c35190b5edb66ecac1479fe4ec80549880198b334aa4fd132a73a3281aab021",
+      "model_sha256": "b80a84aeeaf7b15d2133bc1ac4228fddb131823aa024bf04fa7fc9bc152264c0",
+      "model_path": "models/tool4_v2/scene.xml",
+      "source_sha256": {
+        "src/custom6dof/experiments.py": "811dc3f7e6a86951aca85ee37297ac981fdf5aee8f255be6c44fe024c5ea9a1d",
+        "src/custom6dof/adapter.py": "2ade778bc6603d3dfc7d4358247af841cb207b3778249e4bcf6164ada0913acd",
+        "dependencies/upstream-lock.json": "b85a8f5fc8f78ac9334a0bf89b912a0aa983d80d09c521f8d550f348f370e7dc"
+      },
+      "upstream_commit": "7aec01379ff9a8b135cbac75f18102eb9a27ea8f",
+      "passed": true,
+      "trace_sha256": "d0a645420ebec5ec1e4ec2bc330e7b96cb2fd8a7634ab8c0bf5a59b1db557b82"
+    },
+    "impedance": {
+      "mode": "impedance",
+      "perturbation": false,
+      "duration_s": 9.999999999999897,
+      "acceptance_complete": true,
+      "minimum_acceptance_duration_s": 8.0,
+      "perturbation_applied_steps": 0,
+      "steps": 10000,
+      "nq": 6,
+      "nv": 6,
+      "nu": 6,
+      "nsensor": 18,
+      "start_singularity": {
+        "characteristic_length_m": 0.3,
+        "scaled_singular_values": [
+          2.056176379800485,
+          1.7422795216841345,
+          0.7397808137093577,
+          0.4132852172803549,
+          0.3914715155831121,
+          0.19803231804490556
+        ],
+        "rank": 6,
+        "condition_number": 10.383034446600929
+      },
+      "final_position_error_m": 3.1893834158933163e-10,
+      "final_orientation_error_rad": 1.9196642528019234e-09,
+      "peak_position_error_m": 7.39522172374291e-05,
+      "peak_joint_speed_rad_s": 0.011365081583335957,
+      "final_joint_drift_rad": 0.022599177350169843,
+      "saturated_steps": 0,
+      "max_abs_requested_torque_nm": [
+        0.0003488928250285671,
+        3.1358420869197134,
+        0.08703263678405919,
+        0.00591680553424407,
+        0.17137002412759117,
+        8.535837320015573e-08
+      ],
+      "external_wrench_observation": null,
+      "estimated_external_wrench": null,
+      "normal_force_field": "0 compatibility placeholder unused by impedance, not a sensor",
+      "evaluation_truth": "eval_external_tau_* known injected joint torque; never passed to controller",
+      "scope": "ideal free-space simulation; not hardware validation or sensorless force estimation",
+      "config_sha256": "9c35190b5edb66ecac1479fe4ec80549880198b334aa4fd132a73a3281aab021",
+      "model_sha256": "b80a84aeeaf7b15d2133bc1ac4228fddb131823aa024bf04fa7fc9bc152264c0",
+      "model_path": "models/tool4_v2/scene.xml",
+      "source_sha256": {
+        "src/custom6dof/experiments.py": "811dc3f7e6a86951aca85ee37297ac981fdf5aee8f255be6c44fe024c5ea9a1d",
+        "src/custom6dof/adapter.py": "2ade778bc6603d3dfc7d4358247af841cb207b3778249e4bcf6164ada0913acd",
+        "dependencies/upstream-lock.json": "b85a8f5fc8f78ac9334a0bf89b912a0aa983d80d09c521f8d550f348f370e7dc"
+      },
+      "upstream_commit": "7aec01379ff9a8b135cbac75f18102eb9a27ea8f",
+      "passed": true,
+      "trace_sha256": "0198647324faa80054d6c4d4b770feab3bddbaa50036b76bc07b0f8918707cd2"
+    },
+    "perturb": {
+      "mode": "impedance",
+      "perturbation": true,
+      "duration_s": 9.999999999999897,
+      "acceptance_complete": true,
+      "minimum_acceptance_duration_s": 9.25,
+      "perturbation_applied_steps": 250,
+      "steps": 10000,
+      "nq": 6,
+      "nv": 6,
+      "nu": 6,
+      "nsensor": 18,
+      "start_singularity": {
+        "characteristic_length_m": 0.3,
+        "scaled_singular_values": [
+          2.056176379800485,
+          1.7422795216841345,
+          0.7397808137093577,
+          0.4132852172803549,
+          0.3914715155831121,
+          0.19803231804490556
+        ],
+        "rank": 6,
+        "condition_number": 10.383034446600929
+      },
+      "final_position_error_m": 1.0101235110202873e-07,
+      "final_orientation_error_rad": 1.598363471640938e-06,
+      "peak_position_error_m": 0.0021639693573583347,
+      "peak_joint_speed_rad_s": 0.13726777564131465,
+      "final_joint_drift_rad": 0.02260298666334553,
+      "saturated_steps": 0,
+      "max_abs_requested_torque_nm": [
+        0.006298747387406656,
+        3.1380375702690886,
+        0.08710662249508391,
+        0.007994034433351326,
+        0.17293340115841038,
+        3.024266140171211e-07
+      ],
+      "external_wrench_observation": null,
+      "estimated_external_wrench": null,
+      "normal_force_field": "0 compatibility placeholder unused by impedance, not a sensor",
+      "evaluation_truth": "eval_external_tau_* known injected joint torque; never passed to controller",
+      "scope": "ideal free-space simulation; not hardware validation or sensorless force estimation",
+      "config_sha256": "9c35190b5edb66ecac1479fe4ec80549880198b334aa4fd132a73a3281aab021",
+      "model_sha256": "b80a84aeeaf7b15d2133bc1ac4228fddb131823aa024bf04fa7fc9bc152264c0",
+      "model_path": "models/tool4_v2/scene.xml",
+      "source_sha256": {
+        "src/custom6dof/experiments.py": "811dc3f7e6a86951aca85ee37297ac981fdf5aee8f255be6c44fe024c5ea9a1d",
+        "src/custom6dof/adapter.py": "2ade778bc6603d3dfc7d4358247af841cb207b3778249e4bcf6164ada0913acd",
+        "dependencies/upstream-lock.json": "b85a8f5fc8f78ac9334a0bf89b912a0aa983d80d09c521f8d550f348f370e7dc"
+      },
+      "upstream_commit": "7aec01379ff9a8b135cbac75f18102eb9a27ea8f",
+      "passed": true,
+      "trace_sha256": "c23b441f3485b9584316f8c57860fca1b07ff1b8fa1e18c1fb18a85157dcd1eb"
+    }
+  }
+}

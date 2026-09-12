@@ -1,0 +1,22 @@
+{
+  "scope": "free-space simulation only; no hardware calibration",
+  "model_version": "tool4_v2",
+  "timestep_s": 0.001,
+  "gravity_m_s2": [0, 0, -9.81],
+  "initial_q_rad": [0.7, -0.4, -1.23, 0.04, 0.22, -0.34],
+  "initial_q_source": "Numerical posture selected using seed 60912, 1000 samples in +/-1.3 rad, TCP z>0.1m, maximize minimum scaled Jacobian singular value; rounded. Not hardware/collision validated.",
+  "ideal_actuator_cap_nm": [10, 10, 10, 10, 10, 10],
+  "actuator_cap_source": "explicit numerical test envelope, NOT DM4310 capability or URDF effort",
+  "translational_stiffness_n_m": [40, 40, 40],
+  "translational_damping_ns_m": [8, 8, 8],
+  "rotational_stiffness_nm_rad": [0.3, 0.3, 0.3],
+  "rotational_damping_nms_rad": [0.05, 0.05, 0.05],
+  "joint_damping_nms_rad": [0.03, 0.03, 0.06, 0.008, 0.005, 0.002],
+  "damping_source": "commanded numerical controller damping, not measured physical friction",
+  "trajectory_delta_m": [0.002, 0, 0],
+  "trajectory_rotation_rad": [0, 0, 0.01],
+  "trajectory_ramp_s": 4.0,
+  "duration_s": 10.0,
+  "velocity_acceptance_rad_s": 0.15,
+  "singularity_length_scale_m": 0.3
+}

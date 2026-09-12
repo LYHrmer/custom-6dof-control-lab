@@ -1,0 +1,50 @@
+{
+  "model_version": "tool4_v1",
+  "mujoco_version": "3.12.0",
+  "source_sha256": {
+    "inputs/original/\u81ea\u5b9a\u4e49\u63a7\u5236\u56683.0-tool-4/urdf/\u81ea\u5b9a\u4e49\u63a7\u5236\u56683.0-tool-4.urdf": "84aa5e8ad53d961a7d27e83994854b71761a4b4d2c5010c9477dc8b7bedfb44d",
+    "configs/simulation.json": "f328c689bc90216b88dec3a6c93f0cb500d4264bbc8412a2a25e0f13fe8e2fb8",
+    "tools/build_model.py": "db21b5e725807da236bb79acb34074b06d631cfabf8e1fff683ecc3343264cc9",
+    "inputs/processed/meshes/visual/base_link.STL": "593d914950981550cb19f954861f0de42ba564667f060b8b63c7106c22dd655f",
+    "inputs/processed/meshes/visual/Link1.STL": "ee5fa07901827b4259798e25f7b7cd797b8145277bb7515c522b3fbac3556ad8",
+    "inputs/processed/meshes/visual/Link2.STL": "95be4c48860827001b02d0f48c802cb135f0d76553bca6c0f06cd7bd27a9613a",
+    "inputs/processed/meshes/visual/Link3.STL": "678c5db5d0d3d192e782579b8b0aa132cfaeb858508c42916ce7f09da587d71e",
+    "inputs/processed/meshes/visual/Link4.STL": "544ec00338c1f4b5702c58228c5a51d348c9d8f162b511e719a477b2a6b238b6",
+    "inputs/processed/meshes/visual/Link5.STL": "718cbaf378940719275502dc18911b0ae67596fa78a84ecb639a17a3499d356c",
+    "inputs/processed/meshes/visual/Link6.STL": "c21050bf87a229f8b7e041b342521e65a1654574b90eeb58afe5da8eb87953d5"
+  },
+  "scene_sha256": "f2dcd82f14b5ae5188b77847c9753b1151367fe97b3d090e7cc0b304541394a0",
+  "nq": 6,
+  "nv": 6,
+  "nu": 6,
+  "nsensor": 18,
+  "dynamic_mass_kg": 2.3623211642852087,
+  "total_body_mass_kg": 4.389753219787648,
+  "initial_scaled_jacobian_singular_values": [
+    1.911748554811624,
+    1.4388237519578704,
+    1.0847808715661709,
+    0.396727603392561,
+    0.2798325591492484,
+    0.014356274646318154
+  ],
+  "initial_gravity_nm": [
+    0.0,
+    1.5132759738238164,
+    -1.1590421483813413,
+    0.06679904352718469,
+    0.2288862875266567,
+    2.717875716151674e-10
+  ],
+  "corrections": [
+    "Remove Link_tool duplicate inertial and visual/collision; retain Joint_tool transform and Link_tool frame. Keep Link6 inertial convention as exported."
+  ],
+  "assumptions": [
+    "All contact disabled: processed meshes used only for rendering.",
+    "Original +/-3.14 ranges are unverified export values, not verified mechanical stops.",
+    "No inferred friction/damping/armature. Zero means idealized omission, not measurement.",
+    "Ideal direct torque motor cap 10 Nm each is a numerical envelope, not DM4310 capability.",
+    "Tool site at exported Link_tool origin, not a measured contact TCP.",
+    "CAD inertias retained despite suspected sign issue; no hardware accuracy claim."
+  ]
+}

@@ -1,0 +1,85 @@
+<mujoco model="custom_tool4_v1_free_space">
+  <compiler angle="radian" inertiafromgeom="false" fusestatic="false" />
+  <option timestep="0.001" gravity="0 0 -9.8100000000000005" integrator="implicitfast" />
+  <asset>
+    <mesh name="base_link" file="../../inputs/processed/meshes/visual/base_link.STL" />
+    <mesh name="Link1" file="../../inputs/processed/meshes/visual/Link1.STL" />
+    <mesh name="Link2" file="../../inputs/processed/meshes/visual/Link2.STL" />
+    <mesh name="Link3" file="../../inputs/processed/meshes/visual/Link3.STL" />
+    <mesh name="Link4" file="../../inputs/processed/meshes/visual/Link4.STL" />
+    <mesh name="Link5" file="../../inputs/processed/meshes/visual/Link5.STL" />
+    <mesh name="Link6" file="../../inputs/processed/meshes/visual/Link6.STL" />
+  </asset>
+  <worldbody>
+    <light pos="0 -1 2" dir="0 0 -1" />
+    <geom name="display_floor" type="plane" pos="0 0 -0.22" size="1 1 .01" rgba=".17 .19 .22 1" contype="0" conaffinity="0" />
+    <body name="base_link" pos="0 0 0" quat="1 0 0 0">
+      <inertial pos="0.0049880381758916799 0.0067405566768687902 -0.073436412944336907" mass="2.02743205550244" fullinertia="0.00301415778826916 0.0043371096763832103 0.00647014029510125 0.00014597451074660199 -8.6669472825640403e-06 -7.2772841433809602e-06" />
+      <geom name="visual_base_link" type="mesh" mesh="base_link" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+      <body name="Link1" pos="0 0 0" quat="-0.70710548251123628 0 0 0.70710807985947355">
+        <inertial pos="0.00080175522902964402 0.0089345228227401298 -0.013409982856259901" mass="0.306774615937381" fullinertia="0.00011855149612640801 0.00016275104535737599 0.00014665067559906201 5.0683396447245101e-08 4.2698237358140097e-08 2.1569755740945602e-06" />
+        <geom name="visual_Link1" type="mesh" mesh="Link1" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+        <joint name="Joint1" type="hinge" axis="0 0 1" limited="true" range="-3.14 3.14" damping="0" frictionloss="0" armature="0" />
+        <body name="Link2" pos="0 0 0" quat="-0.0493292480220755 -0.049323884793688141 0.70538569103490145 -0.70538273764081449">
+          <inertial pos="0.129699536412927 0.000214353234915809 -0.010843386770700099" mass="0.721759057107543" fullinertia="0.00034589074277047703 0.00153215070496463 0.0017162895634722599 -2.88777578221709e-06 -2.4532753118774698e-05 4.7036069603608098e-07" />
+          <geom name="visual_Link2" type="mesh" mesh="Link2" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+          <joint name="Joint2" type="hinge" axis="0 0 -1" limited="true" range="-3.14 3.14" damping="0" frictionloss="0" armature="0" />
+          <body name="Link3" pos="0.17100000000000001 0 -0.11285000000000001" quat="-2.5973434669646147e-06 -0.70710548250646599 0.70710807985470336 2.5973530075574148e-06">
+            <inertial pos="-0.00033029347703261702 -0.0080478814196509006 -0.0071932839505722502" mass="0.420117391139394" fullinertia="0.00024841243532890199 0.00033284842346646698 0.00020086014059134599 7.3145128594035301e-07 -2.1760998000211101e-06 -1.5279110856018799e-05" />
+            <geom name="visual_Link3" type="mesh" mesh="Link3" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+            <joint name="Joint3" type="hinge" axis="0 0 1" limited="true" range="-3.14 3.14" damping="0" frictionloss="0" armature="0" />
+            <body name="Link4" pos="0 0.1235 0" quat="-0.70710548251123628 0.70710807985947355 0 0">
+              <inertial pos="-0.0030222491477731 -0.010701110797292201 -0.027946367813552801" mass="0.50785106458491" fullinertia="0.000375005935526406 0.00048199678947339199 0.00026126560559408302 6.6706453189151704e-06 -5.8328284935138799e-05 -2.08888964797331e-05" />
+              <geom name="visual_Link4" type="mesh" mesh="Link4" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+              <joint name="Joint4" type="hinge" axis="0 0 1" limited="true" range="-3.14 3.14" damping="0" frictionloss="0" armature="0" />
+              <body name="Link5" pos="0 -0.01 0" quat="0.67437797838336755 0.6743804555165489 0.21263232508019675 -0.21263310612377287">
+                <inertial pos="0.00037565982886078603 0.059453843932993397 -0.0035337801585084401" mass="0.363031251058654" fullinertia="0.00017418530556987199 0.00022823810930779799 0.00017511053383909299 3.7029798697673299e-07 2.7870653026132299e-06 1.44896439039514e-05" />
+                <geom name="visual_Link5" type="mesh" mesh="Link5" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+                <joint name="Joint5" type="hinge" axis="0 0 -1" limited="true" range="-3.14 3.14" damping="0" frictionloss="0" armature="0" />
+                <body name="Link6" pos="0 0.067500000000000004 0" quat="-2.5973434669646147e-06 -2.5973530075574148e-06 0.70710807985470336 0.70710548250646599">
+                  <inertial pos="1.7550234598928701e-09 -3.9215385105873e-10 0.023209724397309599" mass="0.0427877844573265" fullinertia="2.0439979348195898e-05 2.0439975419713302e-05 3.2029356790928902e-05 -3.5360814705513899e-06 -2.2544963696952201e-12 2.17424275312347e-13" />
+                  <geom name="visual_Link6" type="mesh" mesh="Link6" contype="0" conaffinity="0" group="1" rgba=".74 .77 .8 1" pos="0 0 0" quat="1 0 0 0" />
+                  <joint name="Joint6" type="hinge" axis="0 0 1" limited="true" range="-3.14 3.14" damping="0" frictionloss="0" armature="0" />
+                  <body name="Link_tool" pos="0 0 0.032750000000000001" quat="0.94136338434979161 0.01737517576008013 0.049065858617549779 -0.33335510104231997">
+                    <site name="tool_site" pos="0 0 0" size=".003" rgba="1 .2 .1 1" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="motor_Joint1" joint="Joint1" gear="1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10" />
+    <motor name="motor_Joint2" joint="Joint2" gear="1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10" />
+    <motor name="motor_Joint3" joint="Joint3" gear="1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10" />
+    <motor name="motor_Joint4" joint="Joint4" gear="1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10" />
+    <motor name="motor_Joint5" joint="Joint5" gear="1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10" />
+    <motor name="motor_Joint6" joint="Joint6" gear="1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10" />
+  </actuator>
+  <sensor>
+    <jointpos name="pos_Joint1" joint="Joint1" />
+    <jointvel name="vel_Joint1" joint="Joint1" />
+    <actuatorfrc name="tau_Joint1" actuator="motor_Joint1" />
+    <jointpos name="pos_Joint2" joint="Joint2" />
+    <jointvel name="vel_Joint2" joint="Joint2" />
+    <actuatorfrc name="tau_Joint2" actuator="motor_Joint2" />
+    <jointpos name="pos_Joint3" joint="Joint3" />
+    <jointvel name="vel_Joint3" joint="Joint3" />
+    <actuatorfrc name="tau_Joint3" actuator="motor_Joint3" />
+    <jointpos name="pos_Joint4" joint="Joint4" />
+    <jointvel name="vel_Joint4" joint="Joint4" />
+    <actuatorfrc name="tau_Joint4" actuator="motor_Joint4" />
+    <jointpos name="pos_Joint5" joint="Joint5" />
+    <jointvel name="vel_Joint5" joint="Joint5" />
+    <actuatorfrc name="tau_Joint5" actuator="motor_Joint5" />
+    <jointpos name="pos_Joint6" joint="Joint6" />
+    <jointvel name="vel_Joint6" joint="Joint6" />
+    <actuatorfrc name="tau_Joint6" actuator="motor_Joint6" />
+  </sensor>
+  <keyframe>
+    <key name="simulation_start" qpos="0.29999999999999999 -0.69999999999999996 0.80000000000000004 0.40000000000000002 -0.5 0.20000000000000001" />
+  </keyframe>
+</mujoco>

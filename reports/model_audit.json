@@ -1,0 +1,3121 @@
+{
+  "schema_version": 1,
+  "units": {
+    "length": "URDF m; STL interpreted consistently with URDF, not physically measured",
+    "mass": "kg",
+    "inertia": "kg m^2",
+    "joint_velocity": "rad/s",
+    "joint_effort": "N m per URDF convention, not verified motor ratings"
+  },
+  "sources": [
+    {
+      "path": "inputs/original/自定义控制器3.0-tool-4/urdf/自定义控制器3.0-tool-4.urdf",
+      "sha256": "84aa5e8ad53d961a7d27e83994854b71761a4b4d2c5010c9477dc8b7bedfb44d"
+    },
+    {
+      "path": "inputs/processed/urdf/custom_arm_tool4.urdf",
+      "sha256": "1eeb3a3a904ee76a1bc8b697c9e7ba55202754a6663d991f60e75f1726efea64"
+    },
+    {
+      "path": "inputs/original/自定义控制器3.0-tool-4/urdf/自定义控制器3.0-tool-4.csv",
+      "sha256": "bd653c549fad8180c64d25bb7b61f3856427b4166d511c34be3fed18940872e5"
+    },
+    {
+      "path": "inputs/claude_advice.md",
+      "sha256": "f839395bd86cf1024536bcea33a9fd53c76d2f1a644d9cb5741a6e2377e7f620"
+    }
+  ],
+  "models": {
+    "original": {
+      "robot_name": "自定义控制器3.0-tool-4",
+      "links": {
+        "base_link": {
+          "mass_kg": 2.02743205550244,
+          "com_xyz_m": [
+            0.00498803817589168,
+            0.00674055667686879,
+            -0.0734364129443369
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.00301415778826916,
+              0.000145974510746602,
+              -8.66694728256404e-06
+            ],
+            [
+              0.000145974510746602,
+              0.00433710967638321,
+              -7.27728414338096e-06
+            ],
+            [
+              -8.66694728256404e-06,
+              -7.27728414338096e-06,
+              0.00647014029510125
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.002998224779810336,
+              0.00435299348265902,
+              0.00647018949728426
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0008810287651850957
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/base_link.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/base_link.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link1": {
+          "mass_kg": 0.306774615937381,
+          "com_xyz_m": [
+            0.000801755229029644,
+            0.00893452282274013,
+            -0.0134099828562599
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000118551496126408,
+              5.06833964472451e-08,
+              4.26982373581401e-08
+            ],
+            [
+              5.06833964472451e-08,
+              0.000162751045357376,
+              2.15697557409456e-06
+            ],
+            [
+              4.26982373581401e-08,
+              2.15697557409456e-06,
+              0.000146650675599062
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00011855138020875877,
+              0.00014636675850321807,
+              0.00016303507837086916
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0001018830603411077
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link1.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link1.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link2": {
+          "mass_kg": 0.721759057107543,
+          "com_xyz_m": [
+            0.129699536412927,
+            0.000214353234915809,
+            -0.0108433867707001
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000345890742770477,
+              -2.88777578221709e-06,
+              -2.45327531187747e-05
+            ],
+            [
+              -2.88777578221709e-06,
+              0.00153215070496463,
+              4.70360696036081e-07
+            ],
+            [
+              -2.45327531187747e-05,
+              4.70360696036081e-07,
+              0.00171628956347226
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00034544471626797666,
+              0.0015321562129956266,
+              0.0017167300819437637
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.00016087084731983953
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link2.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link2.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link3": {
+          "mass_kg": 0.420117391139394,
+          "com_xyz_m": [
+            -0.000330293477032617,
+            -0.0080478814196509,
+            -0.00719328395057225
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000248412435328902,
+              7.31451285940353e-07,
+              -2.17609980002111e-06
+            ],
+            [
+              7.31451285940353e-07,
+              0.000332848423466467,
+              -1.52791108560188e-05
+            ],
+            [
+              -2.17609980002111e-06,
+              -1.52791108560188e-05,
+              0.000200860140591346
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00019902696754433324,
+              0.0002484889642161023,
+              0.0003346050676262791
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0001129108641341564
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link3.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link3.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link4": {
+          "mass_kg": 0.50785106458491,
+          "com_xyz_m": [
+            -0.0030222491477731,
+            -0.0107011107972922,
+            -0.0279463678135528
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000375005935526406,
+              6.67064531891517e-06,
+              -5.83282849351388e-05
+            ],
+            [
+              6.67064531891517e-06,
+              0.000481996789473392,
+              -2.08888964797331e-05
+            ],
+            [
+              -5.83282849351388e-05,
+              -2.08888964797331e-05,
+              0.000261265605594083
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00023554028370205562,
+              0.0003972476408021876,
+              0.00048548040608963766
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.00014730751841460557
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link4.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link4.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link5": {
+          "mass_kg": 0.363031251058654,
+          "com_xyz_m": [
+            0.000375659828860786,
+            0.0594538439329934,
+            -0.00353378015850844
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000174185305569872,
+              3.70297986976733e-07,
+              2.78706530261323e-06
+            ],
+            [
+              3.70297986976733e-07,
+              0.000228238109307798,
+              1.44896439039514e-05
+            ],
+            [
+              2.78706530261323e-06,
+              1.44896439039514e-05,
+              0.000175110533839093
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00016984192795220122,
+              0.000175740039856959,
+              0.00023195198090760285
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0001136299869015574
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link5.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link5.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link6": {
+          "mass_kg": 0.0427877844573265,
+          "com_xyz_m": [
+            1.75502345989287e-09,
+            -3.9215385105873e-10,
+            0.0232097243973096
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              2.04399793481959e-05,
+              -3.53608147055139e-06,
+              -2.25449636969522e-12
+            ],
+            [
+              -3.53608147055139e-06,
+              2.04399754197133e-05,
+              2.17424275312347e-13
+            ],
+            [
+              -2.25449636969522e-12,
+              2.17424275312347e-13,
+              3.20293567909289e-05
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              1.6903895913402528e-05,
+              2.3976058854506154e-05,
+              3.202935679092942e-05
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 8.850597976979265e-06
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link6.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link6.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link_tool": {
+          "mass_kg": 0.0427877844573265,
+          "com_xyz_m": [
+            0.000991828222491997,
+            7.99710450638536e-10,
+            -0.00948857920620158
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              1.7143810244253e-05,
+              -7.31210643804769e-07,
+              1.55596141652089e-06
+            ],
+            [
+              -7.31210643804769e-07,
+              2.38987865819848e-05,
+              -7.64335815613986e-08
+            ],
+            [
+              1.55596141652089e-06,
+              -7.64335815613986e-08,
+              3.18667147326002e-05
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              1.6907149916542833e-05,
+              2.3969950763632205e-05,
+              3.203221087866295e-05
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 8.844889801512086e-06
+          },
+          "visual": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link_tool.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://自定义控制器3.0-tool-4/meshes/Link_tool.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        }
+      },
+      "joints": {
+        "Joint1": {
+          "type": "revolute",
+          "parent": "base_link",
+          "child": "Link1",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            -1.5708
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 100.0,
+            "velocity": 1.0
+          },
+          "dynamics": {}
+        },
+        "Joint2": {
+          "type": "revolute",
+          "parent": "Link1",
+          "child": "Link2",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            -1.5708,
+            -0.13963,
+            -3.1416
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 100.0,
+            "velocity": 1.0
+          },
+          "dynamics": {}
+        },
+        "Joint3": {
+          "type": "revolute",
+          "parent": "Link2",
+          "child": "Link3",
+          "xyz_m": [
+            0.171,
+            0.0,
+            -0.11285
+          ],
+          "rpy_rad": [
+            -3.1416,
+            0.0,
+            -1.5708
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 100.0,
+            "velocity": 1.0
+          },
+          "dynamics": {}
+        },
+        "Joint4": {
+          "type": "revolute",
+          "parent": "Link3",
+          "child": "Link4",
+          "xyz_m": [
+            0.0,
+            0.1235,
+            0.0
+          ],
+          "rpy_rad": [
+            -1.5708,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 100.0,
+            "velocity": 1.0
+          },
+          "dynamics": {}
+        },
+        "Joint5": {
+          "type": "revolute",
+          "parent": "Link4",
+          "child": "Link5",
+          "xyz_m": [
+            0.0,
+            -0.01,
+            0.0
+          ],
+          "rpy_rad": [
+            1.5708,
+            0.61087,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 100.0,
+            "velocity": 1.0
+          },
+          "dynamics": {}
+        },
+        "Joint6": {
+          "type": "revolute",
+          "parent": "Link5",
+          "child": "Link6",
+          "xyz_m": [
+            0.0,
+            0.0675,
+            0.0
+          ],
+          "rpy_rad": [
+            1.5708,
+            0.0,
+            3.1416
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 100.0,
+            "velocity": 1.0
+          },
+          "dynamics": {}
+        },
+        "Joint_tool": {
+          "type": "fixed",
+          "parent": "Link6",
+          "child": "Link_tool",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.03275
+          ],
+          "rpy_rad": [
+            0.0,
+            0.10415,
+            -0.68068
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limit": {},
+          "dynamics": {}
+        }
+      },
+      "chain": {
+        "link_count": 8,
+        "joint_count": 7,
+        "roots": [
+          "base_link"
+        ],
+        "valid_tree": true,
+        "serial_chain": true,
+        "revolute_joints": [
+          "Joint1",
+          "Joint2",
+          "Joint3",
+          "Joint4",
+          "Joint5",
+          "Joint6"
+        ],
+        "fixed_joints": [
+          "Joint_tool"
+        ],
+        "invalid_link_references": []
+      },
+      "total_mass_kg": 4.432541004244975,
+      "moving_mass_kg": 2.405108948742535,
+      "mujoco_import": {
+        "available": true,
+        "version": "3.12.0",
+        "compiled": false,
+        "error": "Error: decoder failed for mesh file '/home/lyh/custom-6dof-control-lab/inputs/original/自定义控制器3.0-tool-4/meshes/base_link.STL'\nElement name 'base_link', id 0\nstl_decoder: number of faces should be between 1 and 200000 in STL file '/home/lyh/custom-6dof-control-lab/inputs/original/自定义控制器3.0-tool-4/meshes/base_link.STL'; perhaps this is an ASCII file?",
+        "probe_changes": "resolve package mesh paths; compiler strippath=false only"
+      }
+    },
+    "processed": {
+      "robot_name": "custom_arm_tool4",
+      "links": {
+        "base_link": {
+          "mass_kg": 2.02743205550244,
+          "com_xyz_m": [
+            0.00498803817589168,
+            0.00674055667686879,
+            -0.0734364129443369
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.00301415778826916,
+              0.000145974510746602,
+              -8.66694728256404e-06
+            ],
+            [
+              0.000145974510746602,
+              0.00433710967638321,
+              -7.27728414338096e-06
+            ],
+            [
+              -8.66694728256404e-06,
+              -7.27728414338096e-06,
+              0.00647014029510125
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.002998224779810336,
+              0.00435299348265902,
+              0.00647018949728426
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0008810287651850957
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/base_link.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/base_link.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link1": {
+          "mass_kg": 0.306774615937381,
+          "com_xyz_m": [
+            0.000801755229029644,
+            0.00893452282274013,
+            -0.0134099828562599
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000118551496126408,
+              5.06833964472451e-08,
+              4.26982373581401e-08
+            ],
+            [
+              5.06833964472451e-08,
+              0.000162751045357376,
+              2.15697557409456e-06
+            ],
+            [
+              4.26982373581401e-08,
+              2.15697557409456e-06,
+              0.000146650675599062
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00011855138020875877,
+              0.00014636675850321807,
+              0.00016303507837086916
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0001018830603411077
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link1.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link1.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link2": {
+          "mass_kg": 0.721759057107543,
+          "com_xyz_m": [
+            0.129699536412927,
+            0.000214353234915809,
+            -0.0108433867707001
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000345890742770477,
+              -2.88777578221709e-06,
+              -2.45327531187747e-05
+            ],
+            [
+              -2.88777578221709e-06,
+              0.00153215070496463,
+              4.70360696036081e-07
+            ],
+            [
+              -2.45327531187747e-05,
+              4.70360696036081e-07,
+              0.00171628956347226
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00034544471626797666,
+              0.0015321562129956266,
+              0.0017167300819437637
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.00016087084731983953
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link2.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link2.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link3": {
+          "mass_kg": 0.420117391139394,
+          "com_xyz_m": [
+            -0.000330293477032617,
+            -0.0080478814196509,
+            -0.00719328395057225
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000248412435328902,
+              7.31451285940353e-07,
+              -2.17609980002111e-06
+            ],
+            [
+              7.31451285940353e-07,
+              0.000332848423466467,
+              -1.52791108560188e-05
+            ],
+            [
+              -2.17609980002111e-06,
+              -1.52791108560188e-05,
+              0.000200860140591346
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00019902696754433324,
+              0.0002484889642161023,
+              0.0003346050676262791
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0001129108641341564
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link3.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link3.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link4": {
+          "mass_kg": 0.50785106458491,
+          "com_xyz_m": [
+            -0.0030222491477731,
+            -0.0107011107972922,
+            -0.0279463678135528
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000375005935526406,
+              6.67064531891517e-06,
+              -5.83282849351388e-05
+            ],
+            [
+              6.67064531891517e-06,
+              0.000481996789473392,
+              -2.08888964797331e-05
+            ],
+            [
+              -5.83282849351388e-05,
+              -2.08888964797331e-05,
+              0.000261265605594083
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00023554028370205562,
+              0.0003972476408021876,
+              0.00048548040608963766
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.00014730751841460557
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link4.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link4.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link5": {
+          "mass_kg": 0.363031251058654,
+          "com_xyz_m": [
+            0.000375659828860786,
+            0.0594538439329934,
+            -0.00353378015850844
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              0.000174185305569872,
+              3.70297986976733e-07,
+              2.78706530261323e-06
+            ],
+            [
+              3.70297986976733e-07,
+              0.000228238109307798,
+              1.44896439039514e-05
+            ],
+            [
+              2.78706530261323e-06,
+              1.44896439039514e-05,
+              0.000175110533839093
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              0.00016984192795220122,
+              0.000175740039856959,
+              0.00023195198090760285
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 0.0001136299869015574
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link5.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link5.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link6": {
+          "mass_kg": 0.0427877844573265,
+          "com_xyz_m": [
+            1.75502345989287e-09,
+            -3.9215385105873e-10,
+            0.0232097243973096
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              2.04399793481959e-05,
+              -3.53608147055139e-06,
+              -2.25449636969522e-12
+            ],
+            [
+              -3.53608147055139e-06,
+              2.04399754197133e-05,
+              2.17424275312347e-13
+            ],
+            [
+              -2.25449636969522e-12,
+              2.17424275312347e-13,
+              3.20293567909289e-05
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              1.6903895913402528e-05,
+              2.3976058854506154e-05,
+              3.202935679092942e-05
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 8.850597976979265e-06
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link6.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link6.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        "Link_tool": {
+          "mass_kg": 0.0427877844573265,
+          "com_xyz_m": [
+            0.000991828222491997,
+            7.99710450638536e-10,
+            -0.00948857920620158
+          ],
+          "inertia_rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inertia_kg_m2": [
+            [
+              1.7143810244253e-05,
+              -7.31210643804769e-07,
+              1.55596141652089e-06
+            ],
+            [
+              -7.31210643804769e-07,
+              2.38987865819848e-05,
+              -7.64335815613986e-08
+            ],
+            [
+              1.55596141652089e-06,
+              -7.64335815613986e-08,
+              3.18667147326002e-05
+            ]
+          ],
+          "checks": {
+            "positive_mass": true,
+            "finite": true,
+            "principal_moments_kg_m2": [
+              1.6907149916542833e-05,
+              2.3969950763632205e-05,
+              3.203221087866295e-05
+            ],
+            "positive_definite": true,
+            "principal_triangle_inequality": true,
+            "triangle_margin_kg_m2": 8.844889801512086e-06
+          },
+          "visual": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/visual/Link_tool.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "collision": [
+            {
+              "mesh": "package://custom_arm_tool4/meshes/collision/Link_tool.STL",
+              "xyz_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rpy_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        }
+      },
+      "joints": {
+        "Joint1": {
+          "type": "revolute",
+          "parent": "base_link",
+          "child": "Link1",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            -1.5708
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 1.3,
+            "velocity": 1.0
+          },
+          "dynamics": {
+            "damping": 0.1,
+            "friction": 0.05
+          }
+        },
+        "Joint2": {
+          "type": "revolute",
+          "parent": "Link1",
+          "child": "Link2",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            -1.5708,
+            -0.13963,
+            -3.1416
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 7.9,
+            "velocity": 1.0
+          },
+          "dynamics": {
+            "damping": 0.1,
+            "friction": 0.05
+          }
+        },
+        "Joint3": {
+          "type": "revolute",
+          "parent": "Link2",
+          "child": "Link3",
+          "xyz_m": [
+            0.171,
+            0.0,
+            -0.11285
+          ],
+          "rpy_rad": [
+            -3.1416,
+            0.0,
+            -1.5708
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 2.4,
+            "velocity": 1.0
+          },
+          "dynamics": {
+            "damping": 0.1,
+            "friction": 0.05
+          }
+        },
+        "Joint4": {
+          "type": "revolute",
+          "parent": "Link3",
+          "child": "Link4",
+          "xyz_m": [
+            0.0,
+            0.1235,
+            0.0
+          ],
+          "rpy_rad": [
+            -1.5708,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 0.8,
+            "velocity": 1.0
+          },
+          "dynamics": {
+            "damping": 0.1,
+            "friction": 0.05
+          }
+        },
+        "Joint5": {
+          "type": "revolute",
+          "parent": "Link4",
+          "child": "Link5",
+          "xyz_m": [
+            0.0,
+            -0.01,
+            0.0
+          ],
+          "rpy_rad": [
+            1.5708,
+            0.61087,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 0.7,
+            "velocity": 1.0
+          },
+          "dynamics": {
+            "damping": 0.1,
+            "friction": 0.05
+          }
+        },
+        "Joint6": {
+          "type": "revolute",
+          "parent": "Link5",
+          "child": "Link6",
+          "xyz_m": [
+            0.0,
+            0.0675,
+            0.0
+          ],
+          "rpy_rad": [
+            1.5708,
+            0.0,
+            3.1416
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "limit": {
+            "lower": -3.14,
+            "upper": 3.14,
+            "effort": 0.5,
+            "velocity": 1.0
+          },
+          "dynamics": {
+            "damping": 0.1,
+            "friction": 0.05
+          }
+        },
+        "Joint_tool": {
+          "type": "fixed",
+          "parent": "Link6",
+          "child": "Link_tool",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.03275
+          ],
+          "rpy_rad": [
+            0.0,
+            0.10415,
+            -0.68068
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limit": {},
+          "dynamics": {}
+        }
+      },
+      "chain": {
+        "link_count": 8,
+        "joint_count": 7,
+        "roots": [
+          "base_link"
+        ],
+        "valid_tree": true,
+        "serial_chain": true,
+        "revolute_joints": [
+          "Joint1",
+          "Joint2",
+          "Joint3",
+          "Joint4",
+          "Joint5",
+          "Joint6"
+        ],
+        "fixed_joints": [
+          "Joint_tool"
+        ],
+        "invalid_link_references": []
+      },
+      "total_mass_kg": 4.432541004244975,
+      "moving_mass_kg": 2.405108948742535,
+      "mujoco_import": {
+        "available": true,
+        "version": "3.12.0",
+        "compiled": true,
+        "nq": 6,
+        "nv": 6,
+        "nu": 0,
+        "nsensor": 0,
+        "probe_changes": "resolve package mesh paths; compiler strippath=false only"
+      }
+    }
+  },
+  "original_to_processed_changes": [
+    {
+      "parameter": "joints.Joint1.dynamics.damping",
+      "original": null,
+      "processed": 0.1
+    },
+    {
+      "parameter": "joints.Joint1.dynamics.friction",
+      "original": null,
+      "processed": 0.05
+    },
+    {
+      "parameter": "joints.Joint1.limit.effort",
+      "original": 100.0,
+      "processed": 1.3
+    },
+    {
+      "parameter": "joints.Joint2.dynamics.damping",
+      "original": null,
+      "processed": 0.1
+    },
+    {
+      "parameter": "joints.Joint2.dynamics.friction",
+      "original": null,
+      "processed": 0.05
+    },
+    {
+      "parameter": "joints.Joint2.limit.effort",
+      "original": 100.0,
+      "processed": 7.9
+    },
+    {
+      "parameter": "joints.Joint3.dynamics.damping",
+      "original": null,
+      "processed": 0.1
+    },
+    {
+      "parameter": "joints.Joint3.dynamics.friction",
+      "original": null,
+      "processed": 0.05
+    },
+    {
+      "parameter": "joints.Joint3.limit.effort",
+      "original": 100.0,
+      "processed": 2.4
+    },
+    {
+      "parameter": "joints.Joint4.dynamics.damping",
+      "original": null,
+      "processed": 0.1
+    },
+    {
+      "parameter": "joints.Joint4.dynamics.friction",
+      "original": null,
+      "processed": 0.05
+    },
+    {
+      "parameter": "joints.Joint4.limit.effort",
+      "original": 100.0,
+      "processed": 0.8
+    },
+    {
+      "parameter": "joints.Joint5.dynamics.damping",
+      "original": null,
+      "processed": 0.1
+    },
+    {
+      "parameter": "joints.Joint5.dynamics.friction",
+      "original": null,
+      "processed": 0.05
+    },
+    {
+      "parameter": "joints.Joint5.limit.effort",
+      "original": 100.0,
+      "processed": 0.7
+    },
+    {
+      "parameter": "joints.Joint6.dynamics.damping",
+      "original": null,
+      "processed": 0.1
+    },
+    {
+      "parameter": "joints.Joint6.dynamics.friction",
+      "original": null,
+      "processed": 0.05
+    },
+    {
+      "parameter": "joints.Joint6.limit.effort",
+      "original": 100.0,
+      "processed": 0.5
+    },
+    {
+      "parameter": "links.Link1.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link1.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link1.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link1.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link1.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link1.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link2.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link2.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link2.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link2.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link2.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link2.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link3.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link3.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link3.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link3.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link3.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link3.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link4.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link4.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link4.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link4.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link4.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link4.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link5.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link5.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link5.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link5.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link5.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link5.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link6.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link6.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link6.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link6.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link6.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link6.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link_tool.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link_tool.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/Link_tool.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.Link_tool.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/Link_tool.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/Link_tool.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.base_link.collision",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/base_link.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/collision/base_link.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "links.base_link.visual",
+      "original": [
+        {
+          "mesh": "package://自定义控制器3.0-tool-4/meshes/base_link.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "processed": [
+        {
+          "mesh": "package://custom_arm_tool4/meshes/visual/base_link.STL",
+          "xyz_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "parameter": "robot_name",
+      "original": "自定义控制器3.0-tool-4",
+      "processed": "custom_arm_tool4"
+    }
+  ],
+  "meshes": {
+    "original": [
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link1.STL",
+        "sha256": "ae03b3d1475f5272381548c5fbc1f48ea06857d81f7ada376d594a02be2e5de7",
+        "triangle_count": 162140,
+        "bounds_min_assumed_m": [
+          -0.03999999910593033,
+          -0.04414999857544899,
+          -0.04399999976158142
+        ],
+        "bounds_max_assumed_m": [
+          0.03999999910593033,
+          0.04414999857544899,
+          0.03999999910593033
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link2.STL",
+        "sha256": "ebab833231a02b4c54c0fcdf3cdcb8326f98974a2f9b6d68a9b2663e56a93112",
+        "triangle_count": 178887,
+        "bounds_min_assumed_m": [
+          -0.0325000025331974,
+          -0.032499998807907104,
+          -0.05285000056028366
+        ],
+        "bounds_max_assumed_m": [
+          0.20350000262260437,
+          0.032499998807907104,
+          0.05014999955892563
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link3.STL",
+        "sha256": "844ca3cab34aa5d299f2fc49de3d31e08b4d31ac15bfcd996e20813c46c0f374",
+        "triangle_count": 177621,
+        "bounds_min_assumed_m": [
+          -0.032499998807907104,
+          -0.05249999836087227,
+          -0.07000000029802322
+        ],
+        "bounds_max_assumed_m": [
+          0.032499998807907104,
+          0.03249365836381912,
+          0.0325000025331974
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link4.STL",
+        "sha256": "4dd1e201c12764188ea0b22a1a9e58603dffc070ee15d9b3769c5f83b5a827ca",
+        "triangle_count": 175009,
+        "bounds_min_assumed_m": [
+          -0.036249998956918716,
+          -0.03400000184774399,
+          -0.11500000208616257
+        ],
+        "bounds_max_assumed_m": [
+          0.036249998956918716,
+          0.03399999812245369,
+          0.032430414110422134
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link5.STL",
+        "sha256": "f2eb423e35076301a83e4190507d596e66a1a428a76e21c07ca8cac002531b4e",
+        "triangle_count": 174821,
+        "bounds_min_assumed_m": [
+          -0.032499998807907104,
+          -0.03099999949336052,
+          -0.032999999821186066
+        ],
+        "bounds_max_assumed_m": [
+          0.032499998807907104,
+          0.09224999696016312,
+          0.032499998807907104
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link6.STL",
+        "sha256": "7b2b3a8bc47b20f2293380fdfa8ea23bad5df793e233a92709447603608a2df9",
+        "triangle_count": 2034,
+        "bounds_min_assumed_m": [
+          -0.03786323219537735,
+          -0.03786323219537735,
+          0.004750000312924385
+        ],
+        "bounds_max_assumed_m": [
+          0.03786323219537735,
+          0.03786323219537735,
+          0.061521321535110474
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/Link_tool.STL",
+        "sha256": "a1b97ed76c05ab93cf31b2b12731d38171583bd7d3ec8b0ffb38a94c79137c0a",
+        "triangle_count": 2034,
+        "bounds_min_assumed_m": [
+          -0.041497498750686646,
+          -0.03882221132516861,
+          -0.031535301357507706
+        ],
+        "bounds_max_assumed_m": [
+          0.04348563030362129,
+          0.03882221132516861,
+          0.0308770090341568
+        ]
+      },
+      {
+        "path": "inputs/original/自定义控制器3.0-tool-4/meshes/base_link.STL",
+        "sha256": "2a7c28a94ff9977f772765a8948ad7d5632210bf65daa6a7f71aa1fe853b7aae",
+        "triangle_count": 425161,
+        "bounds_min_assumed_m": [
+          -0.12930001318454742,
+          -0.07900500297546387,
+          -0.10949999839067459
+        ],
+        "bounds_max_assumed_m": [
+          0.20000000298023224,
+          0.14900000393390656,
+          0.004004848189651966
+        ]
+      }
+    ],
+    "processed": [
+      {
+        "path": "inputs/processed/meshes/collision/Link1.STL",
+        "sha256": "31b4eddad7f344f54229c204588ff191f74346dcd1ebcb2139d61b3990573a4b",
+        "triangle_count": 3940,
+        "bounds_min_assumed_m": [
+          -0.039507538080215454,
+          -0.04414999857544899,
+          -0.04399999976158142
+        ],
+        "bounds_max_assumed_m": [
+          0.03999999910593033,
+          0.04414999857544899,
+          0.03999999910593033
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/Link2.STL",
+        "sha256": "f941857b880aa0687b5e88e985c915c797057a1981b3fc33778bd1d18d148359",
+        "triangle_count": 4903,
+        "bounds_min_assumed_m": [
+          -0.0325000025331974,
+          -0.032499998807907104,
+          -0.05276970937848091
+        ],
+        "bounds_max_assumed_m": [
+          0.2034868746995926,
+          0.032499998807907104,
+          0.05014999955892563
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/Link3.STL",
+        "sha256": "b75848c78dd2883ffd0c13121ef4d0075ef375b6f3421ae4b6573d412e890ef0",
+        "triangle_count": 3480,
+        "bounds_min_assumed_m": [
+          -0.032499998807907104,
+          -0.05249999836087227,
+          -0.07000000029802322
+        ],
+        "bounds_max_assumed_m": [
+          0.032499998807907104,
+          0.03249365836381912,
+          0.0325000025331974
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/Link4.STL",
+        "sha256": "3743b59dbfdcd17a72448cbda3ba6ea5ff59397673281e7c70c73d248a47708d",
+        "triangle_count": 2772,
+        "bounds_min_assumed_m": [
+          -0.036249998956918716,
+          -0.033076923340559006,
+          -0.11500000208616257
+        ],
+        "bounds_max_assumed_m": [
+          0.036249998956918716,
+          0.03399999812245369,
+          0.032430414110422134
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/Link5.STL",
+        "sha256": "6149d1edd4eaf63875d3ee72ecbee4303309159ef7ab30368ee547538676c130",
+        "triangle_count": 3132,
+        "bounds_min_assumed_m": [
+          -0.032499998807907104,
+          -0.03099999949336052,
+          -0.032999999821186066
+        ],
+        "bounds_max_assumed_m": [
+          0.032499998807907104,
+          0.09216222912073135,
+          0.032499998807907104
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/Link6.STL",
+        "sha256": "42910ae02443df4e9013ce81d90cc259e262ca2627a664321c004831605dc733",
+        "triangle_count": 1358,
+        "bounds_min_assumed_m": [
+          -0.03786323219537735,
+          -0.03786323219537735,
+          0.004750000312924385
+        ],
+        "bounds_max_assumed_m": [
+          0.03786323219537735,
+          0.03786323219537735,
+          0.061521321535110474
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/Link_tool.STL",
+        "sha256": "b5f5dce5d6bf5a3048f9b271e95a300f4231479a452bd43d2b48a2a03d0b68c7",
+        "triangle_count": 1376,
+        "bounds_min_assumed_m": [
+          -0.041497498750686646,
+          -0.03882221132516861,
+          -0.031535301357507706
+        ],
+        "bounds_max_assumed_m": [
+          0.04348563030362129,
+          0.03882221132516861,
+          0.0308770090341568
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/collision/base_link.STL",
+        "sha256": "83b2719306a747d840daafdab9763c363ab26f06b5949bf8ced8e930b025d784",
+        "triangle_count": 7054,
+        "bounds_min_assumed_m": [
+          -0.12929999828338623,
+          -0.07716487348079681,
+          -0.10804545134305954
+        ],
+        "bounds_max_assumed_m": [
+          0.20000000298023224,
+          0.14900000393390656,
+          0.003321164520457387
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link1.STL",
+        "sha256": "ee5fa07901827b4259798e25f7b7cd797b8145277bb7515c522b3fbac3556ad8",
+        "triangle_count": 7833,
+        "bounds_min_assumed_m": [
+          -0.03999999910593033,
+          -0.04414999857544899,
+          -0.04399999976158142
+        ],
+        "bounds_max_assumed_m": [
+          0.03999999910593033,
+          0.04414999857544899,
+          0.03999999910593033
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link2.STL",
+        "sha256": "95be4c48860827001b02d0f48c802cb135f0d76553bca6c0f06cd7bd27a9613a",
+        "triangle_count": 8117,
+        "bounds_min_assumed_m": [
+          -0.0325000025331974,
+          -0.032499998807907104,
+          -0.05285000056028366
+        ],
+        "bounds_max_assumed_m": [
+          0.2034868746995926,
+          0.032499998807907104,
+          0.05014999955892563
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link3.STL",
+        "sha256": "678c5db5d0d3d192e782579b8b0aa132cfaeb858508c42916ce7f09da587d71e",
+        "triangle_count": 6522,
+        "bounds_min_assumed_m": [
+          -0.032499998807907104,
+          -0.05249999836087227,
+          -0.07000000029802322
+        ],
+        "bounds_max_assumed_m": [
+          0.032499998807907104,
+          0.03249365836381912,
+          0.0325000025331974
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link4.STL",
+        "sha256": "544ec00338c1f4b5702c58228c5a51d348c9d8f162b511e719a477b2a6b238b6",
+        "triangle_count": 5872,
+        "bounds_min_assumed_m": [
+          -0.036249998956918716,
+          -0.03400000184774399,
+          -0.11500000208616257
+        ],
+        "bounds_max_assumed_m": [
+          0.036249998956918716,
+          0.03399999812245369,
+          0.032430414110422134
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link5.STL",
+        "sha256": "718cbaf378940719275502dc18911b0ae67596fa78a84ecb639a17a3499d356c",
+        "triangle_count": 5921,
+        "bounds_min_assumed_m": [
+          -0.032499998807907104,
+          -0.03099999949336052,
+          -0.032999999821186066
+        ],
+        "bounds_max_assumed_m": [
+          0.032499998807907104,
+          0.09224999696016312,
+          0.032499998807907104
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link6.STL",
+        "sha256": "c21050bf87a229f8b7e041b342521e65a1654574b90eeb58afe5da8eb87953d5",
+        "triangle_count": 1080,
+        "bounds_min_assumed_m": [
+          -0.037056080996990204,
+          -0.037056080996990204,
+          0.004750000312924385
+        ],
+        "bounds_max_assumed_m": [
+          0.037056080996990204,
+          0.037056080996990204,
+          0.061521321535110474
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/Link_tool.STL",
+        "sha256": "05ecb9023bfc698275d1b4dd30b8d00636b236cc20f00e0fa7a7234dabe4ad6c",
+        "triangle_count": 1099,
+        "bounds_min_assumed_m": [
+          -0.041377875953912735,
+          -0.0380888469517231,
+          -0.03129282966256142
+        ],
+        "bounds_max_assumed_m": [
+          0.04339950159192085,
+          0.03882221132516861,
+          0.0308770090341568
+        ]
+      },
+      {
+        "path": "inputs/processed/meshes/visual/base_link.STL",
+        "sha256": "593d914950981550cb19f954861f0de42ba564667f060b8b63c7106c22dd655f",
+        "triangle_count": 28893,
+        "bounds_min_assumed_m": [
+          -0.12929999828338623,
+          -0.07900500297546387,
+          -0.10949999839067459
+        ],
+        "bounds_max_assumed_m": [
+          0.20000000298023224,
+          0.14900000393390656,
+          0.0038277008570730686
+        ]
+      }
+    ]
+  },
+  "duplicate_tool": {
+    "fixed_transform_child_to_parent": {
+      "rotation": [
+        [
+          0.7729338362543744,
+          0.6293216280495285,
+          0.08079339850623093
+        ],
+        [
+          -0.6259115163803318,
+          0.7771449597527418,
+          -0.06542541702872598
+        ],
+        [
+          -0.10396181239074925,
+          6.938893903907228e-18,
+          0.9945812895708578
+        ]
+      ],
+      "translation_m": [
+        0.0,
+        0.0,
+        0.03275
+      ]
+    },
+    "cad_components": {
+      "Link6": "打印件-末端-1",
+      "Link_tool": "打印件-末端-1"
+    },
+    "same_cad_instance_string": true,
+    "mass_each_kg": [
+      0.0427877844573265,
+      0.0427877844573265
+    ],
+    "com_distance_m": 2.2905704326871884e-09,
+    "geometry": {
+      "rms_m": 4.299623225722845e-08,
+      "p95_m": 6.097239673238473e-08,
+      "max_m": 6.853987401488728e-08,
+      "sample_count": 12204,
+      "method": "symmetric nearest STL vertex; triangle vertices retain multiplicity"
+    },
+    "inertia_relative_frobenius_difference": 0.23723510923918228,
+    "inertia_comparison": "each tensor about its COM, rotated to Link6 axes; denominator ||I_Link6||F",
+    "hypothesis_only_flip_both_off_diagonal_relative_difference": 3.849887956949353e-07,
+    "hypothesis_action": "diagnostic only; no inertia sign changes authorized by this numerical comparison",
+    "duplicate_supported": true,
+    "recommended_model_correction": "retain Link6 physical properties and geometry once; retain Link_tool as a massless frame"
+  },
+  "zero_pose": {
+    "q_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tool_position_m": [
+      0.12284775853473265,
+      -0.042287383750504115,
+      0.05212298029345603
+    ],
+    "jacobian_world_linear_then_angular": [
+      [
+        0.04228738375050411,
+        -4.472032528416007e-07,
+        2.0745051031036046e-08,
+        -0.05750128375461388,
+        8.33524357676952e-07,
+        -1.734723475976807e-18
+      ],
+      [
+        0.12284775853473263,
+        -0.05212253343634776,
+        -0.02832332365623225,
+        -0.0013905476226874624,
+        0.04551210354394613,
+        2.5180171939502213e-18
+      ],
+      [
+        -0.0,
+        -0.04228596720956912,
+        -0.21162164712114742,
+        0.009902795041854514,
+        0.08932363030098323,
+        4.9419078516368085e-18
+      ],
+      [
+        0.0,
+        0.9999999999269039,
+        0.9999999998197524,
+        -2.193196374051521e-05,
+        -0.9999999998161532,
+        -2.09522005578241e-05
+      ],
+      [
+        0.0,
+        -1.1530839966900882e-05,
+        -1.8805747915996564e-05,
+        -0.9902670479049395,
+        1.9170347891255037e-05,
+        -0.8910110264339512
+      ],
+      [
+        0.9999999999999999,
+        3.6374558527361117e-06,
+        2.6149798159957835e-06,
+        -0.13918036266881803,
+        -4.3614999239600555e-07,
+        0.4539816629932536
+      ]
+    ],
+    "translational_scaling_length_m": 0.1,
+    "scaled_singular_values": [
+      2.893397826884492,
+      1.6898044179594427,
+      1.414376294456167,
+      0.8092361075243173,
+      0.40023918585963075,
+      9.344222201638888e-07
+    ],
+    "scaled_condition_number": 3096456.5743920533,
+    "note": "condition is scaling-dependent; zero pose is not a validated control initial pose"
+  },
+  "cad_motor_name_evidence": [
+    {
+      "link": "base_link",
+      "components": "电池垫-2;角块10-10-10-11;角块10-10-10-9;侧板-2-5;电池-2/RMTB47D电池-1;电池-2/RoboMaster 电池架-STEP-1;角块10-10-10-8;六面螺母8×8×40-M3-17;P0电机底部垫片-2;侧板-2-6;六面螺母8×8×40-M3-16;六面螺母8×8×40-M3-19;六面螺母8×8×40-M3-18;角块10-10-10-10;底板-上-1;角块10-10-10-2;角块10-10-10-6;角块10-10-10-5;角块10-10-10-3;角块10-10-10-7;六面螺母8×8×40-M3-6;角块10-10-10-4;六面螺母8×8×40-M3-4;六面螺母8×8×40-M3-3;六面螺母8×8×40-M3-1;侧板-2;官方零件 RM分电板 QA-2;官方零件 RM分电板 QA-1;侧板-1;六面螺母8×8×40-M3-5;侧板-2-1;六面螺母8×8×40-M3-2;侧板-2-3;主控板-A-1;底板-下-1;底板-上-右-1;打印件-初始位姿限位-1;4310 减速电机 3D 20221104-7"
+    },
+    {
+      "link": "Link1",
+      "components": "L1-侧板-1;六面螺母8×8×40-M3-10;L1-底板-1;L1-轴承边-3;六面螺母8×8×40-M3-13;L1-轴-1;六面螺母8×8×40-M3-11;六面螺母8×8×40-M3-12;六面螺母8×8×40-M3-9;标注件-40-52-7轴承-1;转轴垫片-1;DM-J4340-2EC-V1.1_3d_20260325_1-1"
+    }
+  ],
+  "findings": [
+    {
+      "status": "supported_by_export_evidence",
+      "claim": "Link6 and Link_tool duplicate the same exported physical instance",
+      "evidence": "duplicate_tool: CSV identity, transformed vertices, COM and mass",
+      "action": "remove one physical copy in a derived model, preserving both source exports and the tool frame"
+    },
+    {
+      "status": "unresolved",
+      "claim": "products-of-inertia sign convention may be inconsistent",
+      "evidence": "duplicate_tool inertia comparison and alternate-sign diagnostic",
+      "action": "retain original signs pending CAD/exporter verification; SPD is not proof of correct sign convention"
+    },
+    {
+      "status": "unverified_hardware",
+      "claim": "export limits and processed effort/dynamics are not hardware calibration",
+      "evidence": "models.*.joints and original_to_processed_changes",
+      "action": "do not treat 100 N m, 7.9 N m, damping or friction as a DM4310 rating or measured parameter"
+    }
+  ],
+  "unknowns": [
+    "Actual joint hard stops, encoder zero/sign, velocity and continuous/peak torque limits remain unmeasured.",
+    "User confirms DM4310 on hardware; CAD component names also include DM-J4340. Reconcile CAD/BOM with the actual arm.",
+    "Torque feedback definition, units, rotor versus gearbox-output side, gearbox ratio and control mode require motor documentation and logged verification.",
+    "CAD masses, material densities, motor inclusion, inertia signs and centre-of-mass placement are not physically validated.",
+    "STL files contain no reliable unit declaration; interpreting coordinates as metres does not independently establish physical scale.",
+    "Ordinary MuJoCo mesh collision uses a convex hull: fork cavities and internal clearances are not validated contact geometry. Visual nearest-vertex error is not contact error.",
+    "Motor torque feedback is not an end-effector wrench. Simulation input, estimated wrench and evaluation truth require separate channels.",
+    "Removing the duplicate fixes an export inconsistency; it does not validate the retained Link6 inertia against CAD or hardware."
+  ]
+}

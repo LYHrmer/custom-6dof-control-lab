@@ -1,0 +1,12 @@
+{
+  "source_repository": "/home/lyh/robot-arm-compliant-control-lab",
+  "commit": "7aec01379ff9a8b135cbac75f18102eb9a27ea8f",
+  "files_sha256": {
+    "src/compliant_control_lab/__init__.py": "ea3952b679dfacc78ddd79d60f76f2f2e2cc4019aff05b9a0b90a55d79425c8a",
+    "src/compliant_control_lab/controllers.py": "5d64fe44b4cce33dc14f08fd97c4e082652ee31fcb57a4e5b899dfe6e107b95e",
+    "src/compliant_control_lab/franka_control.py": "4b8568d98f92f81ac2adbc1c92fd30d0e587e5a8a0790cd0518b83b8703c4186",
+    "LICENSE": "75054b6a08e1008c86b6045ab99add2c8fa571987880951a9929f11ee56a7d64"
+  },
+  "policy": "Unmodified selected modules; rebuild from Git object to update. Not editable upstream.",
+  "wheel_sha256": "eb5536a5571770957305075d8559c251cecacb3380088cc0ea16c77e18d40964"
+}

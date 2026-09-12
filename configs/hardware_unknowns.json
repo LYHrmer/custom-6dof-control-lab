@@ -1,0 +1,18 @@
+{
+  "motor_model": {"value": "Damiao 4310", "source": "user confirmation", "verified_from_nameplate": false},
+  "feedback_definition": null,
+  "feedback_unit": null,
+  "feedback_motor_or_output_side": null,
+  "gear_ratio_per_joint": null,
+  "firmware_and_control_mode": null,
+  "continuous_and_peak_torque_nm": null,
+  "peak_duration_and_thermal_limits": null,
+  "joint_direction_and_zero_offset": null,
+  "mechanical_joint_limits_rad": null,
+  "physical_velocity_limits_rad_s": null,
+  "motor_mass_in_cad": null,
+  "measured_payload_and_tcp": null,
+  "inertia_product_sign_convention": null,
+  "additional_ee_force_torque_sensor": false,
+  "hardware_execution_enabled": false
+}
