@@ -16,3 +16,6 @@ reports/user_video_*.jpg
 reports/claude_*.txt
 reports/claude_*.json
 reports/defender_parity/
+showcase/assets/media/
+reports/showcase-review/
+reports/showcase-check/

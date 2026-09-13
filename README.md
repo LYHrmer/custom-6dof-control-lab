@@ -4,6 +4,19 @@
 
 实物电机由用户确认为达妙 4310，用户提供了已在实物验证重力补偿的 Robot-Defender 代码和视频。它们作为独立参考保存，不能据此认定本项目控制器已经通过实物验证。电机反馈的物理定义、单位、减速器侧别、固件模式仍待核对。
 
+## 重力补偿实物展示
+
+[展示页](showcase/index.html)播放作者提供的原始实物录像，支持慢放、关键帧跳转和手机浏览。实物测试在其他设备上进行，目前没有配套遥测数据；页面只展示录像与原理说明。
+
+```bash
+rtk proxy python3 /home/lyh/custom-6dof-control-lab/tools/prepare_showcase_media.py
+rtk proxy python3 -m http.server 8766 --bind 127.0.0.1 --directory /home/lyh/custom-6dof-control-lab/showcase
+```
+
+访问 <http://127.0.0.1:8766>。素材准备使用本机已有 OpenCV，详情见 [展示页说明](showcase/README.md)。视频和截帧仅保存在本地，不上传 GitHub。
+
+缺少实测日志时，可先开展仿真算法改进；[候选方案与验收指标](docs/algorithm_options.md)列出了重力模型敏感性分析、力矩余量约束、奇异位形检查和扰动观测的实施顺序。这些是待验证方案，不是已取得的性能提升。
+
 ## 安装与运行
 
 当前验证环境：Linux x86_64、Python 3.10、MuJoCo 3.12.0。依赖固定在 `requirements.lock`，仅安装进本目录 `.venv`。`-I` 隔离系统 ROS/PYTHONPATH 与用户包；不要在原项目环境中安装或运行。

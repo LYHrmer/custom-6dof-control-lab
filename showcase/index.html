@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="自研六轴机械臂的重力补偿实物演示。观看原始录像，慢放观察手动调姿与多关节姿态变化。">
+  <meta name="theme-color" content="#f3f2ed">
+  <title>重力补偿 · 六轴机械臂实物演示</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#demo">跳到演示视频</a>
+  <header class="site-header wrap">
+    <a href="#top" class="brand" aria-label="六轴机械臂实验室首页">
+      <img src="assets/mark.svg" alt="" width="34" height="34">
+      <span>CUSTOM ARM<span class="brand-sub">六轴机械臂实验室</span></span>
+    </a>
+    <nav aria-label="主导航">
+      <a class="nav-link active" href="#demo" data-section="demo">实物演示</a>
+      <a class="nav-link" href="#moments" data-section="moments">片段观察</a>
+      <a class="nav-link" href="#principle" data-section="principle">补偿原理</a>
+    </nav>
+    <span class="edition"><span class="status-dot"></span> EXPERIMENT 01</span>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" id="demo" data-section="demo" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-line"></span> GRAVITY COMPENSATION</p>
+        <h1 id="hero-title">重力补偿，<br>让动作<span class="highlight">轻一点。</span></h1>
+        <p class="hero-description">自研六轴机械臂的手动调姿记录。<br>从一段现场录像，观察重力补偿下的姿态变化。</p>
+        <button class="btn btn-primary" id="hero-play" type="button"><span class="play-triangle" aria-hidden="true"></span>观看实物演示<span aria-hidden="true">↗</span></button>
+        <p class="hero-footnote">原始录像 <span aria-hidden="true">/</span> 约 18 秒 <span aria-hidden="true">/</span> 可慢放观察</p>
+        <div class="hero-index" aria-hidden="true"><span>G</span><span class="index-line"></span><small>06<br>AXES</small></div>
+      </div>
+
+      <div class="film">
+        <div class="film-heading"><span><span class="square-dot"></span> 实物现场</span><span>RECORDING · 001</span></div>
+        <div class="video-stage" id="video-stage">
+          <video id="demo-video" controls playsinline preload="metadata" poster="assets/media/frame-02.jpg" aria-label="六轴机械臂重力补偿实物录像" aria-describedby="video-description">
+            <source src="assets/media/gravity-demo.mp4" type="video/mp4">
+            您的浏览器不支持内嵌视频，请用支持 MP4 播放的浏览器打开此页面。
+          </video>
+          <button class="video-start" id="video-start" type="button" aria-label="播放实物演示"><span class="play-triangle" aria-hidden="true"></span></button>
+          <div class="media-error" id="media-error" role="status" hidden><strong>演示视频尚未载入</strong><p>请先按展示页说明准备本地视频素材，再刷新页面。</p></div>
+        </div>
+        <div class="player-toolbar">
+          <div class="time-readout"><output id="current-time" aria-label="当前播放时间">00:00</output><span>/</span><span id="duration">00:18</span></div>
+          <div class="player-actions">
+            <button type="button" id="replay" aria-label="从头重新播放">↺ <span>重播</span></button>
+            <div class="rate-switch" role="group" aria-label="播放速度">
+              <button type="button" data-rate="0.5" aria-pressed="false">0.5×</button>
+              <button type="button" data-rate="1" aria-pressed="true">1×</button>
+            </div>
+            <button type="button" id="fullscreen" aria-label="全屏观看"><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          </div>
+        </div>
+        <p class="film-caption" id="video-description"><span>FIG. 01</span> 项目作者提供的实物测试录像，展示手动调姿过程。<span class="source-note">未同步采集关节数据</span></p>
+        <p class="sr-only" id="player-status" role="status"></p>
+      </div>
+    </section>
+
+    <div class="spec-strip wrap" aria-label="演示设备信息">
+      <div><span class="spec-label">机械结构</span><strong>6 <span>个转动关节</span></strong></div>
+      <div><span class="spec-label">电机型号 · 作者确认</span><strong>DM4310 <span>达妙</span></strong></div>
+      <div><span class="spec-label">演示方式</span><strong>手动调姿 <span>实物录像</span></strong></div>
+      <div class="spec-last"><span class="spec-label">观察重点</span><p>手部交互 · 关节联动 · 姿态变化</p></div>
+    </div>
+
+    <section class="moments wrap reveal" id="moments" data-section="moments" aria-labelledby="moments-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / TAKE A CLOSER LOOK</p><h2 id="moments-title">几个值得停下来的瞬间</h2></div><p>点击画面跳转到对应时间，<br>用 0.5× 慢放观察动作细节。</p></div>
+      <div class="moments-grid">
+        <button type="button" class="moment" data-seek="2" aria-label="跳转到2秒，观察直立姿态">
+          <div class="moment-image"><img src="assets/media/frame-02.jpg" alt="约2秒时，手托住机械臂上部，主体呈较直立姿态" loading="lazy" width="1280" height="720"><span>00:02</span><i aria-hidden="true">↗</i></div>
+          <div class="moment-text"><span>01</span><h3>观察起始姿态</h3></div><p>从整机结构与手部接触开始。</p>
+        </button>
+        <button type="button" class="moment" data-seek="7" aria-label="跳转到7秒，观察手部交互">
+          <div class="moment-image"><img src="assets/media/frame-07.jpg" alt="约7秒时，手接触并抓持机械臂上部" loading="lazy" width="1280" height="720"><span>00:07</span><i aria-hidden="true">↗</i></div>
+          <div class="moment-text"><span>02</span><h3>手与机械臂的交互</h3></div><p>留意手部位置与关节的姿态。</p>
+        </button>
+        <button type="button" class="moment" data-seek="12" aria-label="跳转到12秒，观察关节折角">
+          <div class="moment-image"><img src="assets/media/frame-12.jpg" alt="约12秒时，机械臂关节呈另一折角" loading="lazy" width="1280" height="720"><span>00:12</span><i aria-hidden="true">↗</i></div>
+          <div class="moment-text"><span>03</span><h3>姿态与折角的变化</h3></div><p>观察多个关节共同形成的新姿态。</p>
+        </button>
+        <button type="button" class="moment" data-seek="17" aria-label="跳转到17秒，观察较低姿态">
+          <div class="moment-image"><img src="assets/media/frame-17.jpg" alt="约17秒时，机械臂折叠至较低姿态，仍有人手托住" loading="lazy" width="1280" height="720"><span>00:17</span><i aria-hidden="true">↗</i></div>
+          <div class="moment-text"><span>04</span><h3>回到较低的姿态</h3></div><p>观察折叠后的结构与手部支撑。</p>
+        </button>
+      </div>
+    </section>
+
+    <section class="principle wrap reveal" id="principle" data-section="principle" aria-labelledby="principle-title">
+      <div class="principle-intro"><p class="eyebrow">02 / BEHIND THE MOVEMENT</p><h2 id="principle-title">为什么要补偿重力？</h2><p>机械臂的每一段连杆都有自重。姿态改变时，自重作用到各关节上的力矩也随之改变。</p><p>重力补偿根据姿态与模型估算这些力矩，再由电机提供相应补偿，减轻自重带来的下垂趋势。</p><div class="formula" aria-label="重力补偿力矩等于估计的重力项"><span>τ<sub>comp</sub> = ĝ(q)</span><small>原理表达 · 非实测曲线</small></div></div>
+      <div class="principle-steps">
+        <article><span class="step-number">01</span><div><h3>知道机械臂的姿态</h3><p>关节角度决定连杆的位置，也决定自重对各关节的作用。</p></div><span class="step-symbol" aria-hidden="true">q</span></article>
+        <article><span class="step-number">02</span><div><h3>估计关节重力力矩</h3><p>结合连杆质量、质心与运动链，计算当前姿态下的补偿量。</p></div><span class="step-symbol" aria-hidden="true">ĝ</span></article>
+        <article><span class="step-number">03</span><div><h3>由电机提供补偿</h3><p>在关节侧抵消估计的重力影响。摩擦、惯性与模型误差仍会影响实际手感。</p></div><span class="step-symbol" aria-hidden="true">τ</span></article>
+      </div>
+    </section>
+
+    <section class="evidence wrap reveal" aria-label="演示说明">
+      <span class="evidence-label">ABOUT THIS RECORDING</span>
+      <div><h2>一段实物记录，也是下一步研究的起点。</h2><p>本页展示项目作者提供的重力补偿演示。实物测试在其他设备上进行，当前没有配套的关节角度、力矩与时间序列数据。</p><details><summary>查看演示范围与来源说明<span aria-hidden="true">+</span></summary><div class="details-body"><p>原始视频约18.48秒，1280×720。页面保留原录像，关键帧直接截取自视频；慢放仅改变播放速度。</p><p>当前未提供无补偿对照。本页不由录像推断保持精度、手部作用力或松手悬停性能。六轴 MuJoCo 仿真是独立的实现验证，不与这段视频合并为实物测量结果。</p><p>参考代码：Robot-Defender。实物烧录版本、控制角色和力矩反馈定义仍需与测试者核对。</p></div></details></div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="brand footer-brand" href="#top"><img src="assets/mark.svg" width="28" height="28" alt=""><span>CUSTOM ARM</span></a><p>自研六轴机械臂 · 从模型到真实交互</p><a href="https://github.com/LYHrmer/custom-6dof-control-lab" target="_blank" rel="noopener noreferrer">项目仓库 <span class="private-label">私有</span> ↗</a></footer>
+</body>
+</html>
